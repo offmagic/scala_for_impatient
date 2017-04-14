@@ -2,41 +2,41 @@ import math._
 import scala.util.Random
 import scala.BigInt.probablePrime
 
-// Ex 2 -------------------------------------------
+println("Ex 2 -------------------------------------------")
 val calc1 = pow(sqrt(3), 2)
 
-// Ex 3 -------------------------------------------
+println("Ex 3 -------------------------------------------")
 1 + 1
 // res0 = 1 // res0 - это val
 
-// Ex 4 -------------------------------------------
+println("Ex 4 -------------------------------------------")
 val calc2 = "crazy" * 3
 // Метод "*" назодится в классе StringLike от которого наследуется StringOps.
 // В объекте scala.Predef происходит implicit conversion java.lang.String в StringOps:
 // implicit def augmentString(x: String): StringOps = new StringOps(x)
 
-// Ex 5 -------------------------------------------
+println("Ex 5 -------------------------------------------")
 val calc3 = 10 max 2
 // Метод max класса RichInt. Там такая же история как и с предыдущим примером
 // TODO: Разобраться позже с Predef.LowPriorityImplicits, не понятно почему Low и какой конфликт
 
-// Ex 6 -------------------------------------------
+println("Ex 6 -------------------------------------------")
 val calc4 = BigInt(2).pow(1024)
 
-// Ex 7 -------------------------------------------
+println("Ex 7 -------------------------------------------")
 val calc5 = probablePrime(100, Random)
 // нужно заимпортить import scala.BigInt.probablePrime ну или весь пакет ._
 // и scala.util.Random
 
-// Ex 8 -------------------------------------------
+println("Ex 8 -------------------------------------------")
 BigInt(Random.nextLong()).toString(36) // toString(x) вернуть результат в какой-нибудь др
 // системе исчесления
 
-// Ex 9 -------------------------------------------
+println("Ex 9 -------------------------------------------")
 val head = "testString1".head
 val last = "testString1".last
 
-// Ex 10-------------------------------------------
+println("Ex 10-------------------------------------------")
 val take = "take".take(2)
 val drop = "drop".drop(2)
 val takeRight = "takeRight".takeRight(5)
