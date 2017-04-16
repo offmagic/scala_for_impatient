@@ -65,7 +65,7 @@ productRec("Hello")
 
 println("Ex 10 ------------------------------------------")
 def calc(x: Long, n: Long): Double = {
-  if (n == 0) 1l // 0
+  if (n == 0) 1 // 0
   else if (n > 0 && n % 2 == 0) pow(calc(x, n / 2), 2)
   else if (n > 0 && n % 2 != 0) x * calc(x, n - 1)
   else 1 / calc(x, -n)
