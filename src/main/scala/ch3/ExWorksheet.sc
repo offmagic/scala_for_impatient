@@ -49,4 +49,11 @@ val array = {
   poz ++= other
 }
 println("Ex 5 -------------------------------------------")
+val inputArray2 = Array(1.0, 4.0, 6.0, 8.0)
+val avg = inputArray.foldLeft(0)(_ + _) / inputArray.length
+
+println("Ex 6 -------------------------------------------")
+val inputArray3 = Array(1, 4, 6, 8)
+val sorted = inputArray3.sortWith(_ > _).mkString(";")
+
 
