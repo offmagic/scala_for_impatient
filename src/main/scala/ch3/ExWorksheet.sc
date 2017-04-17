@@ -50,10 +50,35 @@ val array = {
 }
 println("Ex 5 -------------------------------------------")
 val inputArray2 = Array(1.0, 4.0, 6.0, 8.0)
-val avg = inputArray.foldLeft(0)(_ + _) / inputArray.length
+val avg = inputArray.sum / inputArray.length
 
 println("Ex 6 -------------------------------------------")
 val inputArray3 = Array(1, 4, 6, 8)
-val sorted = inputArray3.sortWith(_ > _).mkString(";")
+val sorted = inputArray3.sortWith(_ > _)
+
+// тоже самое и для ArrayBuffer
+val buffer = ArrayBuffer(1.0, 3.0, 0.0).sortWith(_ > _)
+
+println("Ex 7 -------------------------------------------")
+Array(4, 5, 6, 6, 5, 1, 4, 1).distinct
+
+println("Ex 8 -------------------------------------------")
+val inputArray4 = ArrayBuffer(1, 0, 4, 6, 8, -2, -5, 10, -1)
+val negativeElements = for (i <-
+                            (for (i <- inputArray4.indices; if inputArray4(i) <= 0) yield i).reverse)
+  yield inputArray4.remove(i)
+
+inputArray4 ++= negativeElements.reverse
+
+// Данный алгоритм экономит память, нам не нужно создавать два ArrayBuffer, чтобы сохранять
+// положительные и отрицательные + нулевые элементы, но есть минус, что при удалении
+// все элементы сдвигаются влево. Ну и плюс накладные расходы на reverse
+// (реализовано через List(head::tail) При малом колличестве отрицательных элементов - он экономит память.
+// При большом колличестве - полностью невыгоден из-за сдвига.
+
+
+
+
+
 
 
