@@ -1,3 +1,6 @@
+import java.util.TimeZone
+
+import scala.collection.JavaConverters
 import scala.collection.mutable.ArrayBuffer
 
 println("Ex 1 -------------------------------------------")
@@ -76,6 +79,15 @@ inputArray4 ++= negativeElements.reverse
 // (реализовано через List(head::tail) При малом колличестве отрицательных элементов - он экономит память.
 // При большом колличестве - полностью невыгоден из-за сдвига.
 
+println("Ex 9 -------------------------------------------")
+val timeZones = TimeZone.getAvailableIDs()
+timeZones.filter(x => x.startsWith("America/")).map(x => x.substring(8)).sorted
+
+println("Ex 10 ------------------------------------------")
+import java.awt.datatransfer._
+import scala.collection.JavaConverters
+val flavors = SystemFlavorMap.getDefaultFlavorMap.asInstanceOf[SystemFlavorMap]
+val images =  JavaConverters.asScalaBuffer(flavors.getNativesForFlavor(DataFlavor.imageFlavor))
 
 
 
