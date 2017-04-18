@@ -1,8 +1,16 @@
+import java.util.Calendar
+
 import scala.collection.JavaConverters
+import scala.collection.mutable.ArrayBuffer
 
 println("Ex 1 -------------------------------------------")
 val goods = Map("Nike boots" -> 5000, "jacket" -> 8000)
 for ((k, v) <- goods) yield k -> (v - (v / 10))
+
+println("Ex 6 -------------------------------------------")
+Calendar.
+
+
 
 println("Ex 7 -------------------------------------------")
 def printSystemProp() {
@@ -53,6 +61,46 @@ def printSystemProp() {
 }
 
 printSystemProp()
+
+println("Ex 8 -------------------------------------------")
+val input8 = ArrayBuffer(2, 4, 7, -1, -10, 9, 100)
+val (min, max) = input8.foldRight(0 -> 0)((a, b) => {
+  val min = if (a < b._1) a else b._1
+  val max = if (a > b._2) a else b._2
+  min -> max
+})
+
+println("Ex 9 -------------------------------------------")
+def stat(array: Array[Int], v: Int) = {
+  var counterLess, counterEquals, counterMore = 0;
+  for (el <- array) {
+    if (el < v) counterLess += 1
+    else if (el == v) counterEquals += 1
+    else counterMore += 1
+  }
+  (counterLess, counterEquals, counterMore)
+}
+stat(Array(5, 11, 10, -2, 9, 100, 54, 10), 10)
+
+println("Ex 10 -------------------------------------------")
+"Hello".zip("World")
+// таким образом можно реализовать простейшее шифрование (хотя это не слишком реалистичный пример)
+// Такая конструкция может помочь когда нужно заменить некие символы на другие
+// Например в тексте запрещены знаки < > и их можно заменять на *
+// ну и для генерации map таким замен может пригодиться например
+
+var sourceString = "!Test string <big> </big>"
+for ((k, v) <- "<>!%".zip("****").toMap)
+  sourceString = sourceString.replace(k.toChar, v.toChar)
+sourceString
+
+// ну или реализовать побитовые операции
+
+
+
+
+
+
 
 
 
