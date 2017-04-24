@@ -1,5 +1,3 @@
-import java.util.Calendar
-
 import scala.collection.JavaConverters
 import scala.collection.mutable.ArrayBuffer
 
@@ -8,8 +6,6 @@ val goods = Map("Nike boots" -> 5000, "jacket" -> 8000)
 for ((k, v) <- goods) yield k -> (v - (v / 10))
 
 println("Ex 6 -------------------------------------------")
-Calendar.
-
 
 
 println("Ex 7 -------------------------------------------")
