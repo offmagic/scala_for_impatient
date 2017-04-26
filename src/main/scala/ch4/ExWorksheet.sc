@@ -1,5 +1,3 @@
-import java.util.Calendar
-
 import scala.collection.JavaConverters
 import scala.collection.mutable.ArrayBuffer
 
