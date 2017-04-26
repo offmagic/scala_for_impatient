@@ -8,7 +8,6 @@ for ((k, v) <- goods) yield k -> (v - (v / 10))
 println("Ex 6 -------------------------------------------")
 
 
-
 println("Ex 7 -------------------------------------------")
 def printSystemProp() {
   val sysProp = JavaConverters.propertiesAsScalaMap(System.getProperties)
